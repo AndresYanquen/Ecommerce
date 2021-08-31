@@ -2,7 +2,7 @@
   "dataUser": 
     {
     "name": "Andrés",
-    "taksPercentage" : 80,
+    "taksPercentage" :10,
     "shopUrl" : "shop.tuecommerce.cl",
     "visits": "120",
     "publishedProducts":"36",
