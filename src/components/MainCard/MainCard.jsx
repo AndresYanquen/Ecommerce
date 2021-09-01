@@ -1,35 +1,37 @@
 import React from "react";
-import { styleMainCard } from "./stylesMainCard";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import {
+  Root,
+  CardContent,
+  Saludo,
+  ProgressBar,
+  OnlineShop,
+  OnlineShopRigth,
+} from "./styled";
 
-export const MainCard = ({name, percentage,shopUrl }) => {
-  const classes = styleMainCard();
-  console.log('props: '+name);
+export const MainCard = ({ name, percentage, shopUrl }) => {
+  console.log("props: " + name);
   return (
     <div>
-      <Card className={classes.root}>
-        <CardContent className={classes.cardContent}>
+      <Root>
+        <CardContent>
           <div style={{ marginLeft: "40px", marginTop: "10px" }}>
-            <div className={classes.saludo}>Hola, {name}  </div>
+            <Saludo> Hola, {name} </Saludo>
             <div style={{ marginTop: "8px" }}>{percentage}% de avance</div>
-            <div className={classes.progressbar} >
-              <div
-                style={{ width:`${percentage}%`, height: "100%" }}
-              ></div>
-            </div>
+            <ProgressBar>
+              <div style={{ width: `${percentage}%`, height: "100%" }}></div>
+            </ProgressBar>
             <div> </div>
-            <div style={{ marginTop: "8px" }}>Tu tienda online: {shopUrl}</div>
+            <OnlineShop>Tu tienda online: {shopUrl} </OnlineShop>
           </div>
 
-          <div style={{ marginBottom: "80px", marginRight: "44px" }}>
+          <OnlineShopRigth>
             <div>
               Tu tienda online :<br></br>
               {shopUrl}
             </div>
-          </div>
+          </OnlineShopRigth>
         </CardContent>
-      </Card>
+      </Root>
     </div>
   );
 };

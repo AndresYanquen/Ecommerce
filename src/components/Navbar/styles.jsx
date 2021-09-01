@@ -1,18 +1,39 @@
 import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export const navBar = makeStyles((theme) => ({
   appBar: {
     background: "#4CC58B",
   },
   menu: {
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    padding: "5px",
-    fontFamily: "Roboto",
-    fontWeight: 500,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      padding: "5px",
+      fontFamily: "Roboto",
+      fontWeight: 500,
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      padding: "5px",
+      fontFamily: "Roboto",
+      fontWeight: 500,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-end",
+      padding: "5px",
+      fontFamily: "Roboto",
+      fontWeight: 500,
+    },
   },
+
   searchBar: {
     width: "auto",
     display: "flex",
@@ -28,9 +49,21 @@ export const navBar = makeStyles((theme) => ({
     margin: "0px 15px",
   },
   search: {
-    backgroundColor: "#fff",
-    width: "280px",
-    borderRadius: "4px",
+    [theme.breakpoints.down("sm")]: {
+      backgroundColor: "#fff",
+      width: "100px",
+      borderRadius: "4px",
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: "#fff",
+      width: "200px",
+      borderRadius: "4px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      backgroundColor: "#fff",
+      width: "230px",
+      borderRadius: "4px",
+    },
   },
   buttonAction: {
     background: "orange",

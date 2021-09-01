@@ -29,8 +29,8 @@ function App() {
     <Container>
       <Navbar />
       <Content>
-        <CenterContent>
-          <GeneralInfo {...variables} />
+        <GeneralInfo {...variables} />
+        <CenterContent style={{ background: "yellow" }}>
           <MainCard
             name={Data.dataUser.name}
             percentage={Data.dataUser.taksPercentage}

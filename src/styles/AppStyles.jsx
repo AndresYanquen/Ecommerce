@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.main`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.div`
-  width: 85%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,9 @@ export const Content = styled.div`
   justify-content: center;
   overflow: hidden;
   padding: 10px;
+  @media (max-width: 400px) {
+    width: 90%;
+  }
 `;
 export const CenterContent = styled.div`
   width: 100%;
@@ -39,6 +42,12 @@ export const CenterContent = styled.div`
     bottom: 20px;
     right: 20px;
     width: 40%;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: auto;
+    img {
+      display: none;
+    }
   }
 `;
 
@@ -72,6 +81,26 @@ export const TasktText = styled.div`
   & p {
     font-size: 14px;
     color: grey;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    & p {
+      margin: 0px;
+    }
+    & h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 5px 0px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    & p {
+      font-size: 12px;
+      color: grey;
+    }
   }
 `;
 
@@ -107,4 +136,11 @@ export const CardsProductContainer = styled.div`
   grid-gap: 15px;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 400px) {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
 `;

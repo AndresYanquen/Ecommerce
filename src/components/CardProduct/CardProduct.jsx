@@ -1,28 +1,26 @@
 import React from "react";
-import { cardProduct } from "./styles";
+import {
+  CardContainer,
+  CardItemFooter,
+  CardItemContent,
+  CardItemTitle,
+} from "./styled";
 
 const CardProduct = ({ title, content, step, time, icon }) => {
-  const cardProductStyles = cardProduct();
   return (
-    <div className={cardProductStyles.cardContainer}>
-      <div
-        className={`${cardProductStyles.cardItem} ${cardProductStyles.title}`}
-      >
+    <CardContainer>
+      <CardItemTitle>
         <img src={icon && icon} alt="Icono" />
         <h3>{title && title}</h3>
-      </div>
-      <div
-        className={`${cardProductStyles.cardItem} ${cardProductStyles.content}`}
-      >
+      </CardItemTitle>
+      <CardItemContent>
         <p>{content && content}</p>
-      </div>
-      <div
-        className={`${cardProductStyles.cardItem} ${cardProductStyles.footer}`}
-      >
+      </CardItemContent>
+      <CardItemFooter>
         <span>{step && step}</span>
         <h4>{time && time}</h4>
-      </div>
-    </div>
+      </CardItemFooter>
+    </CardContainer>
   );
 };
 
