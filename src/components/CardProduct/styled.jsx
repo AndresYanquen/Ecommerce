@@ -18,6 +18,11 @@ export const CardContainer = styled.div`
     margin: 0;
     padding: 10px;
   }
+  @media (min-width: 1100px) {
+    width: 340px;
+    margin: 0;
+    padding: 10px;
+  }
 `;
 
 export const CardItemTitle = styled.div`

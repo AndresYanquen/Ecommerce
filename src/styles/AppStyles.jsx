@@ -215,7 +215,7 @@ export const CardsProductContainer = styled.div`
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
   }
-  @media (min-width: 1330px) {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: auto;
