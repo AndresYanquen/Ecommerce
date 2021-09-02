@@ -62,7 +62,7 @@ export const CardItem = styled.h3`
 
   height: 100%;
   @media (min-width: 900px) {
-    font-size: 48px;
+    font-size: 40px;
     width: auto;
   }
 `;

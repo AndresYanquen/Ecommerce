@@ -39,14 +39,34 @@ export const CenterContent = styled.div`
 
   & img {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
-    width: 40%;
+    width: 300px;
   }
   @media (max-width: 400px) {
     grid-template-columns: auto;
     img {
-      display: none;
+      display: block;
+      bottom: 160px;
+      left: 50%;
+      width: 180px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    img {
+      display: block;
+      bottom: 160px;
+      left: 50%;
+      width: 180px;
+    }
+  }
+  @media (min-width: 900px) {
+    img {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40%;
     }
   }
 `;
@@ -83,13 +103,54 @@ export const TasktText = styled.div`
     color: grey;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 399px) {
     width: 100%;
     & p {
       margin: 0px;
     }
     & h3 {
-      font-size: 15px;
+      font-size: 25px;
+      font-weight: 700;
+      margin: 5px 0px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    & p {
+      font-size: 12px;
+      color: grey;
+    }
+  }
+
+  @media (min-width: 400px) {
+    width: 60%;
+    margin-left: 7%;
+    & p {
+      margin: 0px;
+    }
+    & h3 {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 5px 0px;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    & p {
+      font-size: 11px;
+      color: grey;
+    }
+  }
+
+  @media (min-width: 800px) {
+    width: 40%;
+    & p {
+      margin: 10px 0px;
+    }
+    & h3 {
+      font-size: 30px;
       font-weight: 700;
       margin: 5px 0px;
       &:last-of-type {
@@ -142,5 +203,21 @@ export const CardsProductContainer = styled.div`
     grid-gap: 10px;
     align-items: center;
     justify-content: center;
+  }
+  @media (min-width: 401px) {
+    grid-template-columns: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+  }
+  @media (min-width: 1330px) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
   }
 `;

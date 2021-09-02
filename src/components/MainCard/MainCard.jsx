@@ -6,6 +6,9 @@ import {
   ProgressBar,
   OnlineShop,
   OnlineShopRigth,
+  PercentageAdv,
+  TextPercentage,
+  InfoContent,
 } from "./styled";
 
 export const MainCard = ({ name, percentage, shopUrl }) => {
@@ -14,16 +17,14 @@ export const MainCard = ({ name, percentage, shopUrl }) => {
     <div>
       <Root>
         <CardContent>
-          <div style={{ marginLeft: "40px", marginTop: "10px" }}>
+          <InfoContent>
             <Saludo> Hola, {name} </Saludo>
-            <div style={{ marginTop: "8px" }}>{percentage}% de avance</div>
+            <TextPercentage>{percentage}% de avance</TextPercentage>
             <ProgressBar>
-              <div style={{ width: `${percentage}%`, height: "100%" }}></div>
+              <PercentageAdv percentage={percentage}></PercentageAdv>
             </ProgressBar>
-            <div> </div>
             <OnlineShop>Tu tienda online: {shopUrl} </OnlineShop>
-          </div>
-
+          </InfoContent>
           <OnlineShopRigth>
             <div>
               Tu tienda online :<br></br>
