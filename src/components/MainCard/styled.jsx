@@ -44,9 +44,10 @@ export const TextPercentage = styled.div`
 `;
 
 export const PercentageAdv = styled.div`
-  width: 10%;
+  width: ${(props) => props.percentage}%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ffac30;
+  border-radius: 10px;
 `;
 
 export const ProgressBar = styled.div`

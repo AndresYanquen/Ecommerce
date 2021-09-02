@@ -14,7 +14,7 @@ export const CardContainer = styled.div`
   margin: 10px;
 
   @media (max-width: 400px) {
-    width: 320px;
+    width: 290px;
     margin: 0;
     padding: 10px;
   }

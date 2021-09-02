@@ -69,6 +69,14 @@ export const CenterContent = styled.div`
       width: 40%;
     }
   }
+  @media (min-width: 1500px) {
+    img {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 30%;
+    }
+  }
 `;
 
 export const GreenCard = styled.div`
@@ -144,10 +152,11 @@ export const TasktText = styled.div`
     }
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     width: 40%;
+    margin-left: 7%;
     & p {
-      margin: 10px 0px;
+      margin: 0px;
     }
     & h3 {
       font-size: 30px;
@@ -159,9 +168,13 @@ export const TasktText = styled.div`
     }
 
     & p {
-      font-size: 12px;
+      font-size: 11px;
       color: grey;
     }
+  }
+
+  @media (min-width: 700px) {
+    width: 60%;
   }
 `;
 
@@ -186,6 +199,34 @@ export const Bar = styled.div`
       color: white;
       padding: 0 5px;
     }
+  }
+
+  @media (max-width: 600px) {
+    width: 300px;
+    height: 15px;
+    background-color: #ffeda8;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    border-radius: 5px;
+    & div {
+      height: 100%;
+      border-radius: 10px;
+      background-color: #ffac30;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      & span {
+        font-size: 10px;
+        color: white;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    width: 300px;
   }
 `;
 export const CardsProductContainer = styled.div`
@@ -218,6 +259,12 @@ export const CardsProductContainer = styled.div`
   @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: 1500px) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     grid-template-rows: auto;
   }
 `;
